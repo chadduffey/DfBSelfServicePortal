@@ -1,0 +1,22 @@
+{% from 'macros.html' import render_field %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ACME Dropbox for Business Provisioning</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Special+Elite|Inconsolata|PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+        <link href="../static/css/main-register.css" rel="stylesheet" />
+    </head>
+    <body>
+        <img src="../static/img/dropbox-icon.png" class="icon">
+        <h1>...setting up your ACME Dropbox for Business account...</h1>
+        <form action="" method="post">
+            {% for field in form %}
+            {{ render_field(field) }}   
+            {% endfor %}
+        	<p>Do you use your @acmehorses.com email for Dropbox already?</p>
+            <input type="checkbox" name="existing" value="existing"><br>
+        	<button type="submit">Create Account</button>
+        </form>
+    </body>
+</html>
